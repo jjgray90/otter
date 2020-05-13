@@ -14,7 +14,7 @@ A tech test which takes a users email & name, submits to an API and returns a su
 
 ### Prerequisites
 
-A source Code Editor or IDE, React, Enzyme, Enzyme-adapter-react-16, Firebase, Node-sass.
+A source Code Editor or IDE, React, Node-sass.
 
 ## Deployment
 
