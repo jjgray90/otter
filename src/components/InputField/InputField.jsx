@@ -1,11 +1,19 @@
 import React from "react";
 import styles from "./InputField.module.scss";
 
-const InputField = () => {
+const InputField = (props) => {
+  const { name, type, selectInput, placeholder, handleInput, value } = props;
+
   return (
-    <>
-      <p>InputField works</p>
-    </>
+    <input
+      value={value}
+      className={styles.inputField}
+      type={type}
+      name={name}
+      onInput={(event) => selectInput(event.target.value)}
+      placeholder={placeholder}
+      onChange={handleInput}
+    />
   );
 };
 

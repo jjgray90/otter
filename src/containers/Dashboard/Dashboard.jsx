@@ -6,7 +6,9 @@ import Button from "../../components/Button";
 import RegisterModalBox from "../RegisterModalBox";
 import ConfirmationModalBox from "../../components/ConfirmationModalBox";
 
-const Dashboard = () => {
+const Dashboard = (props) => {
+  // const { displayConfModal } = props;
+
   const [regModalShown, toggleRegModal] = useState(false);
   const [confModalShown, toggleConfModal] = useState(false);
 
@@ -46,12 +48,7 @@ const Dashboard = () => {
       </div>
 
       <div className={styles.registerModal} style={regModalJSX}>
-        <RegisterModalBox
-          title="Register"
-          message="Here we go"
-          handleClick={() => displayConfModal()}
-          btnText="Register"
-        />
+        <RegisterModalBox handleClick={() => displayConfModal()} />
       </div>
 
       <div className={styles.confirmationModal} style={confModalJSX}>
