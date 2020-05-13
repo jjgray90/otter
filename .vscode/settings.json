@@ -1,0 +1,7 @@
+{
+  "terminal.integrated.unicodeVersion": "",
+  "emojisense.languages": {
+    "javascript": true
+  },
+  "javascript.validate.enable": false
+}
