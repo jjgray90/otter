@@ -1,4 +1,5 @@
 .dashboardContainer {
+  background-color: blanchedalmond;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,6 +22,7 @@
 
     h2 {
       font-size: 2.5em;
+      padding: 0 15px;
     }
 
     .btn {

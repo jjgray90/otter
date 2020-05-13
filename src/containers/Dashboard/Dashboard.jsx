@@ -6,9 +6,7 @@ import Button from "../../components/Button";
 import RegisterModalBox from "../RegisterModalBox";
 import ConfirmationModalBox from "../../components/ConfirmationModalBox";
 
-const Dashboard = (props) => {
-  // const { displayConfModal } = props;
-
+const Dashboard = () => {
   const [regModalShown, toggleRegModal] = useState(false);
   const [confModalShown, toggleConfModal] = useState(false);
 
@@ -21,8 +19,9 @@ const Dashboard = (props) => {
 
   const displayConfModal = () => {
     if (regModalShown) {
-      toggleRegModal(!regModalShown);
+      displayRegModal();
       toggleConfModal(!confModalShown);
+
     } else {
       toggleConfModal(!confModalShown);
     }
@@ -48,7 +47,14 @@ const Dashboard = (props) => {
       </div>
 
       <div className={styles.registerModal} style={regModalJSX}>
-        <RegisterModalBox handleClick={() => displayConfModal()} />
+        <RegisterModalBox
+          displayRegModal={displayRegModal}
+          toggleRegModal={toggleRegModal}
+          regModalShown={regModalShown}
+          toggleConfModal={toggleConfModal}
+          confModalShown={confModalShown}
+          displayConfModal={displayConfModal}
+        />
       </div>
 
       <div className={styles.confirmationModal} style={confModalJSX}>
